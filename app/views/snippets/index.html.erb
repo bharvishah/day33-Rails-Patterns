@@ -1,0 +1,19 @@
+<h1>Listing Quotes</h1>
+<p>
+<% @snippets.each do |snippet| %>
+
+        <h3><%= highlight(snippet.author, params[:search]) %></h3>
+        <i class="fa fa-quote-left fa-1x pull-left fa-border"></i>
+
+
+        <p> <%= highlight(snippet.quote, params[:search]) %>
+        <i class="fa fa-quote-right fa-1x  fa-border"></i></p>
+
+
+<p>Tags: <%= raw snippet.tag_list.map { |t| link_to t, snippet_tag_path(t) }.join(', ') %></p>        
+<p><br><br>
+</p>
+
+
+
+<% end %>

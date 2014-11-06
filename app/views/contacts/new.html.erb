@@ -1,0 +1,10 @@
+<div class="page-header">
+  <h1>We will be happy to publish your quotes!! <small>Please contact us !</small></h1>
+</div>
+
+<%= simple_form_for @contact_form do |f| %>
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :message, as: :text %>
+  <%= f.submit class: "btn btn-primary btn-lg" %>
+<% end %>
